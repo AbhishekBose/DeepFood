@@ -1,26 +1,16 @@
-# Caffe
+# DeepFood: Deep Learning-Based Food Image Recognition for Computer-Aided Dietary Assessment 
 
-[![Build Status](https://travis-ci.org/BVLC/caffe.svg?branch=master)](https://travis-ci.org/BVLC/caffe)
-[![License](https://img.shields.io/badge/license-BSD-blue.svg)](LICENSE)
 
-Caffe is a deep learning framework made with expression, speed, and modularity in mind.
-It is developed by the Berkeley Vision and Learning Center ([BVLC](http://bvlc.eecs.berkeley.edu)) and community contributors.
+## Guide
 
-Check out the [project site](http://caffe.berkeleyvision.org) for all the details like
+How to run the experiments using AlexNet/GoogLeNet on Food-101?
 
-- [DIY Deep Learning for Vision with Caffe](https://docs.google.com/presentation/d/1UeKXVgRvvxg9OUdh_UiC5G71UMscNPlvArsWER41PsU/edit#slide=id.p)
-- [Tutorial Documentation](http://caffe.berkeleyvision.org/tutorial/)
-- [BVLC reference models](http://caffe.berkeleyvision.org/model_zoo.html) and the [community model zoo](https://github.com/BVLC/caffe/wiki/Model-Zoo)
-- [Installation instructions](http://caffe.berkeleyvision.org/installation.html)
+* clone this repo from scratch: `git clone https://github.com/deercoder/DeepFood.git`
+* configure the environment according to the official [tutorial](http://caffe.berkeleyvision.org/installation.html). Minor changes have been applied in this repo.
+* download pre-trained model(alexNet, googleNet), under the `./models` folder
+* download imagenet mean file, under `data/ilsvrc12/` folder with the `get_ilsvrc_aux.sh`
+* run the model from the caffe's root directory, with `./models/finetune-food101-alexNet/train_full.sh` or `./models/finetune-food101-googlenet/train_full.sh`, check results!
 
-and step-by-step examples.
-
-[![Join the chat at https://gitter.im/BVLC/caffe](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/BVLC/caffe?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-Please join the [caffe-users group](https://groups.google.com/forum/#!forum/caffe-users) or [gitter chat](https://gitter.im/BVLC/caffe) to ask questions and talk about methods and models.
-Framework development discussions and thorough bug reports are collected on [Issues](https://github.com/BVLC/caffe/issues).
-
-Happy brewing!
 
 ## License and Citation
 
@@ -34,4 +24,17 @@ Please cite Caffe in your publications if it helps your research:
       Journal = {arXiv preprint arXiv:1408.5093},
       Title = {Caffe: Convolutional Architecture for Fast Feature Embedding},
       Year = {2014}
+    }
+
+
+Please cite DeepFood in your publications if it helps your research:
+
+
+    @inproceedings{liu2016deepfood,
+      title={DeepFood: Deep Learning-Based Food Image Recognition for Computer-Aided Dietary Assessment},
+      author={Liu, Chang and Cao, Yu and Luo, Yan and Chen, Guanling and Vokkarane, Vinod and Ma, Yunsheng},
+      booktitle={International Conference on Smart Homes and Health Telematics},
+      pages={37--48},
+      year={2016},
+      organization={Springer International Publishing}
     }
